@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: clip;
+  font-size: 1.6rem;
+}
+
+/* Common */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 1140px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header */
+
+.header {
+  margin-top: 28px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__list {
+  display: flex;
+  margin-left: 406px;
+  margin-top: 16px;
+  gap: 38px;
+}
+
+.navbar__link {
+  position: relative;
+  display: inline-block;
+  height: 28px;
+  color: var(--text-color-black-gray, #575d5e);
+  /* Paragraph/h2 18px medium */
+  font-family: "Public Sans";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155.556%; /* 155.556% */
+  transition: color 0.25s ease;
+}
+
+.navbar__link::after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: 0;
+  bottom: 0;
+  width: 16px;
+  height: 2px;
+  background: var(--Primary-color-black-green, #143c3c);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--Primary-color-black, #152427);
+}
+
+.navbar__link:hover::after,
+.navbar__link--active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.navbar__action {
+  margin-left: 88px;
+}
+
+.navbar__btn {
+  display: inline-block;
+  text-align: center;
+  width: 173px;
+  height: 57px;
+  border-radius: 40px;
+  border: 1.5px solid #143c3c;
+  background: var(--Primary-color-black-green, #143c3c);
+  line-height: 57px;
+  color: var(--text-color-white, #fff);
+  text-align: center;
+  /* Paragraph/h2 18px medium */
+  font-family: "Public Sans";
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.navbar__btn:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 60, 60, 0.25);
+}
+
+.navbar__divider {
+  margin-top: 13px;
+  display: block;
+  width: 1140px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #dddcdc 51.09%,
+    rgba(212, 212, 212, 0) 99.68%
+  );
+}
