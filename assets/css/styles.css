@@ -374,3 +374,146 @@ select {
     animation: none;
   }
 }
+
+/* Brand */
+
+.brands {
+  margin-top: 275px;
+}
+
+.brands__inner {
+  display: flex;
+  align-items: center;
+  width: 1140px;
+  height: 201px;
+  border-radius: 100.5px;
+  background: var(--Scondery-color-light-green, #e2eddf);
+}
+
+.brands__list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+}
+
+.brands__item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Hiệu ứng nhẹ: logo đang rê chuột nhích lên, các logo còn lại mờ đi */
+.brands__item:hover {
+  transform: translateY(-4px);
+}
+
+/* .brands__list:has(.brands__item:hover) .brands__item:not(:hover) {
+  opacity: 0.45;
+} */
+
+@media (prefers-reduced-motion: reduce) {
+  .brands__item {
+    transition: none;
+  }
+
+  .brands__item:hover {
+    transform: none;
+  }
+}
+
+.brands__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.brands__logo {
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.brands__logo--google {
+  margin-left: 121px;
+  color: var(--Primary-color-black-green, #143c3c);
+  font-family: "Poppins", sans-serif;
+  font-size: 3.1rem;
+  font-weight: 500;
+}
+
+.brands__item--slack {
+  margin-left: 47px;
+}
+
+.brands__icon--slack {
+  width: 40px;
+  height: 46px;
+  background: var(--Primary-color-black-green, #143c3c);
+  -webkit-mask: url("../img/slack-icon.svg") center / contain no-repeat;
+  mask: url("../img/slack-icon.svg") center / contain no-repeat;
+}
+
+.brands__logo--slack {
+  margin-left: 5px;
+  color: var(--Primary-color-black-green, #143c3c);
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.brands__item--agworld {
+  margin-left: 51px;
+}
+
+.brands__icon--agworld {
+  width: 40px;
+  height: 31px;
+  /* Mask */
+  background: var(--Primary-color-black-green, #143c3c);
+  -webkit-mask: url("../img/discord-icon.svg") center / contain no-repeat;
+  mask: url("../img/discord-icon.svg") center / contain no-repeat;
+}
+
+.brands__logo--agworld {
+  margin-left: 11px;
+  color: var(--Primary-color-black-green, #143c3c);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+.brands__logo--riotinto {
+  margin-left: 64px;
+  color: var(--Primary-color-black-green, #143c3c);
+  font-family: "Sonsie One";
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.brands__item--heroku {
+  margin-left: 63px;
+}
+
+.brands__icon--heroku {
+  width: 29px;
+  height: 30px;
+  /* Mask */
+  background: var(--Primary-color-black-green, #143c3c);
+  -webkit-mask: url("../img/heroku-computer-icons-heroku-icon.svg") center /
+    contain no-repeat;
+  mask: url("../img/heroku-computer-icons-heroku-icon.svg") center / contain
+    no-repeat;
+}
+
+.brands__logo--heroku {
+  margin-left: 10px;
+  color: var(--Primary-color-black-green, #143c3c);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
