@@ -593,26 +593,22 @@ select {
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
-    background-color 0.25s ease;
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
-.service__nav--prev {
+.service__nav--prev,
+.service__nav--next {
   background: var(--Scondery-color-light-green, #e2eddf);
   color: var(--Primary-color-black, #152427);
 }
 
-.service__nav--next {
+/* Nút đang hover: nền xanh đậm + mũi tên trắng */
+.service__nav:hover {
   background: var(--Primary-color-black-green, #143c3c);
   color: var(--text-color-white, #fff);
-}
-
-.service__nav:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(20, 60, 60, 0.25);
-}
-
-.service__nav--prev:hover {
-  background: #d3e4cf;
 }
 
 .service__nav:active {
