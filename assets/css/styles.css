@@ -517,3 +517,198 @@ select {
   font-size: 1.9rem;
   font-weight: 600;
 }
+
+/* Service */
+
+.service {
+  margin-top: 106px;
+}
+
+.service__label {
+  margin-left: 46px;
+  position: relative;
+  color: var(--Primary-color-black, #152427);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 162.5%;
+  width: 122px;
+  height: 26px;
+}
+
+.service__label-line {
+  position: absolute;
+  display: inline-block;
+  width: 25px;
+  height: 1px;
+  left: -46px;
+  top: 9px;
+  background: var(--Primary-color-black, #152427);
+}
+
+.service__header {
+  display: flex;
+  margin-top: 12px;
+}
+
+.service__heading {
+  position: relative;
+  width: 520px;
+  height: 104px;
+  color: var(--Primary-color-black, #152427);
+  font-family: "Poppins", sans-serif;
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 123.81%;
+}
+
+.service__heading-line {
+  position: absolute;
+  display: inline-block;
+  width: 66px;
+  height: 2px;
+  bottom: 19px;
+  right: 125px;
+  background: var(--Primary-color-black, #152427);
+}
+
+.service__controls {
+  display: flex;
+  gap: 17px;
+  align-self: flex-end;
+  margin-left: 422px;
+  margin-bottom: 9px;
+}
+
+.service__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: 50%;
+  font-size: 2.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.service__nav--prev {
+  background: var(--Scondery-color-light-green, #e2eddf);
+  color: var(--Primary-color-black, #152427);
+}
+
+.service__nav--next {
+  background: var(--Primary-color-black-green, #143c3c);
+  color: var(--text-color-white, #fff);
+}
+
+.service__nav:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(20, 60, 60, 0.25);
+}
+
+.service__nav--prev:hover {
+  background: #d3e4cf;
+}
+
+.service__nav:active {
+  transform: translateY(0) scale(0.95);
+  box-shadow: none;
+}
+
+.service__nav:focus-visible {
+  outline: 2px solid var(--Primary-color-black-green, #143c3c);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service__nav {
+    transition: none;
+  }
+
+  .service__nav:hover,
+  .service__nav:active {
+    transform: none;
+  }
+}
+
+.service__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 76px;
+}
+
+.service__card {
+  height: 100%;
+  border-radius: 20px;
+  background: transparent;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background-color 0.35s ease;
+}
+
+/* Khung ảnh giữ tỉ lệ cố định, ảnh được cắt theo khung (cover) nên không bị méo */
+.service__thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 7 / 6;
+  border-radius: 20px 20px 0 0;
+  background-color: lightgray;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service__body {
+  margin-top: 24px;
+  padding: 0 0 32px;
+  transition: padding 0.35s ease;
+}
+
+.service__title {
+  color: var(--Primary-color-black, #152427);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.service__desc {
+  max-width: 265px;
+  max-height: 72px;
+  margin-top: 18px;
+  color: var(--text-color-light-gray, #7d8188);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/* Hover: card nổi lên, có nền trắng + bóng, nội dung thụt vào như thiết kế */
+.service__card:hover {
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(20, 60, 60, 0.12);
+  transform: translateY(-6px);
+}
+
+.service__card:hover .service__body {
+  padding: 0 18px 32px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service__card,
+  .service__body {
+    transition: none;
+  }
+
+  .service__card:hover {
+    transform: none;
+  }
+}
