@@ -1141,3 +1141,147 @@ select {
   font-weight: 500;
   line-height: 155.556%; /* 155.556% */
 }
+
+/* Projects */
+
+.projects {
+  position: relative;
+  margin-top: 148px;
+  background: var(--Primary-color-black-green, #143c3c);
+  padding-top: 116px;
+  padding-bottom: 63px;
+}
+
+.projects__header {
+  display: flex;
+}
+
+.projects__heading {
+  position: relative;
+  width: 457px;
+  color: #e7f9f9;
+
+  /* Heading/H3 42px bold */
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 123.81%;
+}
+
+.projects__heading-line {
+  position: absolute;
+  bottom: 20px;
+  right: 116px;
+  width: 66px;
+  height: 2px;
+  background: var(--Scondery-color-blue, #83a17d);
+}
+
+.projects__header-right {
+  margin-left: 93px;
+}
+
+.projects__desc {
+  width: 570px;
+  height: 59px;
+  color: var(--Scondery-color-gray, #6a8383);
+
+  /* Paragraph/h2 18px medium */
+  font-family: "Public Sans";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 155.556%; /* 155.556% */
+}
+
+.projects__link {
+  margin-top: 13px;
+  display: inline-flex;
+  gap: 26px;
+  color: #fff;
+
+  /* Paragraph/h2 18px medium */
+  font-family: "Public Sans";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 155.556%; /* 155.556% */
+}
+
+.projects__media {
+  position: relative;
+  margin-top: 65px;
+  cursor: pointer;
+}
+
+.projects__play {
+  position: absolute;
+  top: 213px;
+  left: 511px;
+  width: 118px;
+  height: 118px;
+  border-radius: 118px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  cursor: pointer;
+  transition:
+    scale 0.4s ease,
+    background-color 0.4s ease;
+}
+
+.projects__play::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  animation: projectsPlayPulse 2.4s ease-out infinite;
+}
+
+@keyframes projectsPlayPulse {
+  0% {
+    opacity: 0.6;
+    scale: 1;
+  }
+
+  100% {
+    opacity: 0;
+    scale: 1.45;
+  }
+}
+
+.projects__media:hover .projects__play,
+.projects__play:focus-visible {
+  scale: 1.08;
+  background-color: rgba(20, 60, 60, 0.85);
+}
+
+.projects__play:focus-visible {
+  outline: 2px solid var(--Scondery-color-blue, #83a17d);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projects__play {
+    transition: none;
+  }
+
+  .projects__play::before {
+    animation: none;
+  }
+
+  .projects__media:hover .projects__play,
+  .projects__play:focus-visible {
+    scale: none;
+  }
+}
+
+.projects__design-1 {
+  position: absolute;
+  top: 118px;
+  right: 88px;
+}
+
+.projects__design-2 {
+  position: absolute;
+  top: 211px;
+  right: 92.28px;
+}
