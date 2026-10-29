@@ -13,30 +13,30 @@
       rel="stylesheet"
     />
   </head>
-  <body style="height: 10000px">
+  <body>
     <!-- Header -->
     <header class="header">
       <div class="container">
         <!-- Navbar -->
         <nav class="navbar">
           <!-- Logo -->
-          <a href="#!" class="logo navbar__logo">
+          <a href="./" class="logo navbar__logo">
             <img src="./assets/img/logo.svg" alt="MODULARS" class="logo__img" />
           </a>
 
           <!-- Navigation Menu -->
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a href="#!" class="navbar__link">Home</a>
+              <a href="#home" class="navbar__link">Home</a>
             </li>
             <li class="navbar__item">
-              <a href="#!" class="navbar__link">About</a>
+              <a href="#about" class="navbar__link">About</a>
             </li>
             <li class="navbar__item">
-              <a href="#!" class="navbar__link">Blog</a>
+              <a href="#blog" class="navbar__link">Blog</a>
             </li>
             <li class="navbar__item">
-              <a href="#!" class="navbar__link">Contact</a>
+              <a href="#contact" class="navbar__link">Contact</a>
             </li>
           </ul>
 
@@ -53,7 +53,7 @@
     <!-- Main -->
     <main>
       <!-- Hero Section -->
-      <section class="hero">
+      <section id="home" class="hero">
         <div class="container">
           <div class="hero__inner">
             <!-- Hero Content -->
@@ -258,7 +258,7 @@
       </section>
 
       <!-- About Us Section -->
-      <section class="about">
+      <section id="about" class="about">
         <div class="container about__container">
           <!-- Left: media (all children are position: absolute) -->
           <div class="about__media">
@@ -364,9 +364,10 @@
         <div class="container process__container">
           <img
             src="./assets/img/process-img.svg"
-            alt="Project idea"
+            alt="Consultant on the phone next to a laptop"
             class="process__img"
           />
+
           <!-- Process Header -->
           <div class="process__header">
             <p class="process__label">
@@ -555,6 +556,241 @@
           </ul>
         </div>
       </section>
+
+      <!-- Blog Section -->
+      <section id="blog" class="blog">
+        <div class="container blog__container">
+          <!-- Blog Header -->
+          <div class="blog__header">
+            <div class="blog__header-left">
+              <p class="blog__label">
+                <span class="blog__label-line"></span>
+                BLOG &amp; ARTICLES
+              </p>
+              <h2 class="blog__heading">
+                Take a look at our latest articles and resources
+                <span class="blog__heading-line"></span>
+              </h2>
+            </div>
+            <p class="blog__desc">
+              The best agency are the ones ideated with clients.
+              <br />
+              we corporate your ideas with memorable
+            </p>
+          </div>
+
+          <!-- Blog List -->
+          <ul class="blog__list">
+            <!-- Article 1 -->
+            <li class="blog__item">
+              <article class="blog__card">
+                <div
+                  class="blog__img blog__img--pegboard"
+                  role="img"
+                  aria-label="Workspace with a pegboard, laptop and tablet on a desk"
+                ></div>
+                <div class="blog__body">
+                  <span class="blog__tag">STORIES</span>
+                  <h3 class="blog__title">
+                    <a href="#!" class="blog__title-link">
+                      What did we learn from nunning over 100 design sprints in
+                      less the year?
+                    </a>
+                  </h3>
+                  <time class="blog__date" datetime="2022-01-29">
+                    JANUARY 29, 2022
+                  </time>
+                </div>
+              </article>
+            </li>
+
+            <!-- Article 2 -->
+            <li class="blog__item">
+              <article class="blog__card">
+                <div
+                  class="blog__img blog__img--sketch"
+                  role="img"
+                  aria-label="Hand sketching a UI wireframe on paper"
+                ></div>
+                <div class="blog__body">
+                  <span class="blog__tag">STORIES</span>
+                  <h3 class="blog__title">
+                    <a href="#!" class="blog__title-link">
+                      The difference between the UI/ UX design a simple guide
+                      for beginner’s
+                    </a>
+                  </h3>
+                  <time class="blog__date" datetime="2022-01-29">
+                    JANUARY 29, 2022
+                  </time>
+                </div>
+              </article>
+            </li>
+
+            <!-- Article 3 -->
+            <li class="blog__item">
+              <article class="blog__card">
+                <div
+                  class="blog__img blog__img--keyboard"
+                  role="img"
+                  aria-label="Hands typing on a white keyboard next to glasses"
+                ></div>
+                <div class="blog__body">
+                  <span class="blog__tag">STORIES</span>
+                  <h3 class="blog__title">
+                    <a href="#!" class="blog__title-link">
+                      How marketing can help your business more than anything.
+                    </a>
+                  </h3>
+                  <time class="blog__date" datetime="2022-01-29">
+                    JANUARY 29, 2022
+                  </time>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="container footer__container">
+        <div class="footer__top">
+          <!-- Left: Newsletter & Socials -->
+          <div class="footer__newsletter">
+            <h2 class="footer__heading">Sign up for our newsletter</h2>
+
+            <form action="#!" class="footer__form">
+              <div class="footer__form-row">
+                <input
+                  type="email"
+                  class="footer__input"
+                  placeholder="Enter your email"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="footer__submit"
+                  aria-label="Submit"
+                >
+                  <img
+                    src="./assets/img/footer-arrow.svg"
+                    alt=""
+                    class="footer__arrow"
+                  />
+                </button>
+              </div>
+              <!-- Input Underline -->
+              <div class="footer__form-line"></div>
+            </form>
+
+            <!-- Social Circles -->
+            <div class="footer__socials">
+              <!-- Facebook circle (div with img inside) -->
+              <div class="footer__social-circle">
+                <img src="./assets/img/facebook.svg" alt="Facebook" />
+              </div>
+
+              <!-- Middle circle / Instagram (3 layers of div) -->
+              <div
+                class="footer__social-circle footer__social-circle--instagram"
+              >
+                <div class="footer__social-inner">
+                  <div class="footer__social-dot"></div>
+                </div>
+              </div>
+
+              <!-- Twitter circle (div with img inside) -->
+              <div class="footer__social-circle">
+                <img src="./assets/img/twitter.png" alt="Twitter" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Nav Columns -->
+          <div class="footer__nav">
+            <!-- Col 1: Pages -->
+            <div class="footer__col">
+              <h3 class="footer__col-title">Pages</h3>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">About</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Blog</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Blog Post</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 2: Product -->
+            <div class="footer__col">
+              <h3 class="footer__col-title">Product</h3>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">About</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Blog</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Blog Post</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 3: Overview -->
+            <div class="footer__col">
+              <h3 class="footer__col-title">Overview</h3>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Home1</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Home2</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Home3</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Pricing1</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 4: About us -->
+            <div class="footer__col">
+              <h3 class="footer__col-title">About us</h3>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Team</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Investors</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Blog</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#!" class="footer__link">Press</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Bottom Line (1140px x 1px) -->
+        <div class="footer__line"></div>
+      </div>
+    </footer>
   </body>
 </html>
